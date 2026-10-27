@@ -113,7 +113,7 @@ h1{font-weight:900;letter-spacing:-.02em}h2{font-weight:900;font-size:clamp(2.2r
 @media (prefers-reduced-motion:reduce){.hero .rain{animation:none}}
 .hero .wrap{position:relative;z-index:1}
 .hero{position:relative;overflow:hidden;padding:70px 0 0;min-height:92vh}.hero .wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:30px;align-items:center}
-.hero h1{font-size:clamp(1.9rem,3.6vw,3.6rem);line-height:1.05;max-width:20ch}.hero h1 span{display:block;overflow:hidden}.hero .sub{color:var(--muted);font-size:1.2rem;max-width:44ch;margin:20px 0 26px}.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero h1{font-size:clamp(1.9rem,3.6vw,3.6rem);line-height:1.05;max-width:20ch}.proof .stars{color:#B8810A}.hero h1 span{display:block;overflow:hidden}.hero .sub{color:var(--muted);font-size:1.2rem;max-width:44ch;margin:20px 0 26px}.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
 .hero .proof{display:flex;gap:26px;flex-wrap:wrap;margin-top:30px}.hero .proof div{font-size:.95rem;color:var(--muted)}.hero .proof strong{display:block;font-family:var(--font-head);font-size:1.5rem;color:var(--head);line-height:1.1}
 .art svg{width:100%;height:auto;overflow:visible}
 .story{position:relative;background:#fff;padding:60px 0}
@@ -228,7 +228,7 @@ var mb=document.querySelector('.menu-btn'),mn=document.getElementById('mnav');
 mb.addEventListener('click',function(){var o=mn.classList.toggle('open');mb.setAttribute('aria-expanded',o);mb.textContent=o?'Close':'Menu';});
 mn.addEventListener('click',function(e){if(e.target.tagName==='A'){mn.classList.remove('open');mb.setAttribute('aria-expanded',false);mb.textContent='Menu';}});
 var els=document.querySelectorAll('.rv');
-if('IntersectionObserver' in window && !reduce){var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -10% 0px',threshold:.12});els.forEach(function(el){io.observe(el);});}else{els.forEach(function(el){el.classList.add('in');});}
+if('IntersectionObserver' in window && !reduce){var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -10% 0px',threshold:.12});els.forEach(function(el){io.observe(el);});function sweep(){var h=window.innerHeight;els.forEach(function(el){if(el.classList.contains('in'))return;var r=el.getBoundingClientRect();if(r.bottom>0&&r.top<h*1.05){el.classList.add('in');io.unobserve(el);}});}window.addEventListener('scroll',sweep,{passive:true});window.addEventListener('hashchange',function(){setTimeout(sweep,400);setTimeout(sweep,1200);});var sw=0,swt=setInterval(function(){sweep();if(++sw>20)clearInterval(swt);},500);}else{els.forEach(function(el){el.classList.add('in');});}
 var steps=document.getElementById('steps'),stepEls=[];
 function prog(el,start,end){var r=el.getBoundingClientRect(),vh=window.innerHeight;var p=(vh*start-r.top)/(r.height+vh*(start-end));return Math.max(0,Math.min(1,p));}
 window.__prog=prog;
