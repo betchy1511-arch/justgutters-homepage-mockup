@@ -25,6 +25,7 @@ h1 .hl,h2 .hl,.hero h1 span.hl{display:inline;color:inherit;background:linear-gr
 .social{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.social a{display:inline-block;padding:6px 12px;border:1px solid rgba(255,255,255,.35);border-radius:999px;font-size:.85rem;font-weight:700;color:#fff;text-decoration:none}.social a:hover{background:rgba(255,255,255,.12)}
 .ig-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.ig-grid a{position:relative;display:block;aspect-ratio:1;overflow:hidden;border-radius:12px;background:#0E1A2B}.ig-grid img{width:100%;height:100%;object-fit:cover;transition:transform .6s}.ig-grid a:hover img{transform:scale(1.06)}.ig-grid a::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(0,0,0,.5))}.ig-grid a span{position:absolute;left:10px;right:10px;bottom:8px;color:#fff;font-size:.8rem;font-weight:700;z-index:1}
 @media (max-width:860px){.ig-grid{grid-template-columns:repeat(3,1fr)}}@media (max-width:480px){.ig-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:768px){footer .cols a,footer .bottom a,.mockbar a,.topbar a{display:inline-block;padding:9px 0;min-height:40px;line-height:22px}}
 .sec-head.split{max-width:none}.sec-head.split h2{font-size:clamp(1.7rem,3.3vw,2.9rem);margin-bottom:10px}.sec-head.split .lead{max-width:none;font-size:1.15rem}
 @media (min-width:1024px){.sec-head.split h2{white-space:nowrap}}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--font-head);font-weight:700;font-size:1rem;line-height:1;padding:16px 24px;border-radius:var(--btn-r);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background .18s,color .18s,transform .18s;min-height:48px}
@@ -131,7 +132,7 @@ h1{font-weight:900;letter-spacing:-.02em}h2{font-weight:900;font-size:clamp(2.2r
 .rtab{display:flex;gap:10px;align-items:center;text-align:left;background:#fff;border:1px solid var(--card-line);border-radius:14px;padding:10px 12px;cursor:pointer;font:inherit;color:var(--text);transition:transform .2s,box-shadow .2s,border-color .2s}
 .rtab .av{flex:none;width:36px;height:36px;border-radius:50%;color:#fff;display:grid;place-items:center;font-weight:800;font-size:.85rem}.rtab b{display:block;color:#1F2A3A;font-size:.95rem}.rtab small{color:var(--muted);font-size:.8rem}
 .rtab.on{border-color:#1F2A3A;box-shadow:4px 4px 0 #F7C56B;transform:translateY(-2px)}
-.rplay{margin-top:12px;border:1px solid var(--card-line);background:#fff;border-radius:999px;padding:6px 16px;font:inherit;font-size:.9rem;cursor:pointer;color:var(--muted)}
+.rplay{margin-top:12px;border:1px solid var(--card-line);background:#fff;border-radius:999px;padding:9px 18px;min-height:40px;font:inherit;font-size:.9rem;cursor:pointer;color:var(--muted)}
 @media (max-width:900px){.rev3{grid-template-columns:1fr}.rtabs{grid-template-columns:1fr 1fr}}@media (max-width:560px){.rtabs{grid-template-columns:1fr}.rq-wrap{padding:28px 22px 24px}.rq{left:22px;right:22px;top:28px}}
 .hero h1 span{display:block;overflow:hidden}.hero .sub{color:var(--muted);font-size:1.2rem;max-width:44ch;margin:20px 0 26px}.hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
 .hero .proof{display:flex;gap:26px;flex-wrap:wrap;margin-top:30px}.hero .proof div{font-size:.95rem;color:var(--muted)}.hero .proof strong{display:block;font-family:var(--font-head);font-size:1.5rem;color:var(--head);line-height:1.1}
@@ -174,7 +175,7 @@ body.ready .art .drop{animation:rain 1.4s linear 4s infinite}
 @media (prefers-reduced-motion:reduce){.art .ln,.art .gut,.art .ground{stroke-dashoffset:0!important;animation:none!important}.art .tag,.art .water{opacity:1!important;animation:none!important}.art .drop{animation:none!important;opacity:0!important}}</style>
 </head>
 <body class="opt3 d3">
-<div class="mockbar">Homepage mockup 3 of 3: Rain Story. <a href="index.html">See the other directions</a></div>
+<div class="mockbar">Homepage mockup 3 of 5: Rain Story. <a href="index.html">See the other directions</a></div>
 <div class="topbar"><div class="wrap"><a href="tel:+12012300381">Call or text for a free estimate: (201) 230-0381</a><div class="social"><a href="https://www.facebook.com/people/Just-Gutters/61554707186907/">Facebook</a><a href="https://www.instagram.com/just.gutters">Instagram</a><a href="https://www.google.com/maps?cid=3999183471512401406">Google</a><a href="https://www.tiktok.com/@just.gutters.llc">TikTok</a></div></div></div>
 <header class="site"><div class="wrap">
 <a class="logo" href="#top" aria-label="Just Gutters LLC home"><img src="assets/web/logo-dark.png" alt="Just Gutters LLC" width="892" height="253"></a>
@@ -272,7 +273,7 @@ if(steps){var sbtn=[].slice.call(steps.querySelectorAll('.step')),spa=[].slice.c
  if('IntersectionObserver' in window){var sio=new IntersectionObserver(function(en){if(en[0].isIntersecting){sio.disconnect();start();}},{threshold:.25});sio.observe(steps);}else{start();}
 }
 /* lightbox for gallery photos */
-var lb=document.createElement('div');lb.className='lightbox';lb.setAttribute('role','dialog');lb.setAttribute('aria-modal','true');lb.setAttribute('aria-label','Photo viewer');lb.innerHTML='<button class="lb-close" aria-label="Close">×</button><button class="lb-prev" aria-label="Previous">‹</button><figure><img alt=""><figcaption></figcaption></figure><button class="lb-next" aria-label="Next">›</button>';document.body.appendChild(lb);
+var lb=document.createElement('div');lb.className='lightbox';lb.setAttribute('role','dialog');lb.setAttribute('aria-modal','true');lb.setAttribute('aria-label','Photo viewer');lb.innerHTML='<button class="lb-close" aria-label="Close">×</button><button class="lb-prev" aria-label="Previous">‹</button><figure><img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><figcaption></figcaption></figure><button class="lb-next" aria-label="Next">›</button>';document.body.appendChild(lb);
 var lbItems=[].slice.call(document.querySelectorAll('a[data-lb]')),lbI=0;
 function lbShow(i){lbI=(i+lbItems.length)%lbItems.length;var a=lbItems[lbI],im=a.querySelector('img');lb.querySelector('img').src=a.getAttribute('href');lb.querySelector('img').alt=im?im.alt:'';lb.querySelector('figcaption').textContent=a.dataset.cap||(im?im.alt:'');lb.classList.add('open');document.body.style.overflow='hidden';}
 function lbHide(){lb.classList.remove('open');document.body.style.overflow='';}

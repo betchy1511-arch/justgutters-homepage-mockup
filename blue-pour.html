@@ -25,6 +25,7 @@ h1 .hl,h2 .hl,.hero h1 span.hl{display:inline;color:inherit;background:linear-gr
 .social{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.social a{display:inline-block;padding:6px 12px;border:1px solid rgba(255,255,255,.35);border-radius:999px;font-size:.85rem;font-weight:700;color:#fff;text-decoration:none}.social a:hover{background:rgba(255,255,255,.12)}
 .ig-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.ig-grid a{position:relative;display:block;aspect-ratio:1;overflow:hidden;border-radius:12px;background:#0E1A2B}.ig-grid img{width:100%;height:100%;object-fit:cover;transition:transform .6s}.ig-grid a:hover img{transform:scale(1.06)}.ig-grid a::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(0,0,0,.5))}.ig-grid a span{position:absolute;left:10px;right:10px;bottom:8px;color:#fff;font-size:.8rem;font-weight:700;z-index:1}
 @media (max-width:860px){.ig-grid{grid-template-columns:repeat(3,1fr)}}@media (max-width:480px){.ig-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:768px){footer .cols a,footer .bottom a,.mockbar a,.topbar a{display:inline-block;padding:9px 0;min-height:40px;line-height:22px}}
 .sec-head.split{max-width:none}.sec-head.split h2{font-size:clamp(1.7rem,3.3vw,2.9rem);margin-bottom:10px}.sec-head.split .lead{max-width:none;font-size:1.15rem}
 @media (min-width:1024px){.sec-head.split h2{white-space:nowrap}}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--font-head);font-weight:700;font-size:1rem;line-height:1;padding:16px 24px;border-radius:var(--btn-r);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background .18s,color .18s,transform .18s;min-height:48px}
@@ -161,7 +162,7 @@ footer{background:transparent;padding:30px 0 30px}footer .wrap>div:first-child{b
 </head>
 <body class="opt1 d1">
 <noscript><style>#pre{display:none}</style></noscript><div id="pre" aria-hidden="true"><div class="preinner"><div class="drop"><img src="assets/justGutters_logo.png" alt=""></div><div class="pretxt"><strong>Good gutters</strong><span>Great peace of mind</span><em>Seamless gutters, formed on site in Hackettstown, NJ</em></div></div></div>
-<div class="mockbar">Homepage mockup 1 of 3: Blue Pour. <a href="index.html">See the other directions</a></div>
+<div class="mockbar">Homepage mockup 1 of 5: Blue Pour. <a href="index.html">See the other directions</a></div>
 <div class="topbar"><div class="wrap"><a href="tel:+12012300381">Call or text for a free estimate: (201) 230-0381</a><div class="social"><a href="https://www.facebook.com/people/Just-Gutters/61554707186907/">Facebook</a><a href="https://www.instagram.com/just.gutters">Instagram</a><a href="https://www.google.com/maps?cid=3999183471512401406">Google</a><a href="https://www.tiktok.com/@just.gutters.llc">TikTok</a></div></div></div>
 <header class="site"><div class="wrap">
 <a class="logo" href="#top" aria-label="Just Gutters LLC home"><img src="assets/justGutters_logo.png" alt="Just Gutters LLC" width="892" height="253"></a>
@@ -245,7 +246,7 @@ if(steps){var sbtn=[].slice.call(steps.querySelectorAll('.step')),spa=[].slice.c
  if('IntersectionObserver' in window){var sio=new IntersectionObserver(function(en){if(en[0].isIntersecting){sio.disconnect();start();}},{threshold:.25});sio.observe(steps);}else{start();}
 }
 /* lightbox for gallery photos */
-var lb=document.createElement('div');lb.className='lightbox';lb.setAttribute('role','dialog');lb.setAttribute('aria-modal','true');lb.setAttribute('aria-label','Photo viewer');lb.innerHTML='<button class="lb-close" aria-label="Close">×</button><button class="lb-prev" aria-label="Previous">‹</button><figure><img alt=""><figcaption></figcaption></figure><button class="lb-next" aria-label="Next">›</button>';document.body.appendChild(lb);
+var lb=document.createElement('div');lb.className='lightbox';lb.setAttribute('role','dialog');lb.setAttribute('aria-modal','true');lb.setAttribute('aria-label','Photo viewer');lb.innerHTML='<button class="lb-close" aria-label="Close">×</button><button class="lb-prev" aria-label="Previous">‹</button><figure><img alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><figcaption></figcaption></figure><button class="lb-next" aria-label="Next">›</button>';document.body.appendChild(lb);
 var lbItems=[].slice.call(document.querySelectorAll('a[data-lb]')),lbI=0;
 function lbShow(i){lbI=(i+lbItems.length)%lbItems.length;var a=lbItems[lbI],im=a.querySelector('img');lb.querySelector('img').src=a.getAttribute('href');lb.querySelector('img').alt=im?im.alt:'';lb.querySelector('figcaption').textContent=a.dataset.cap||(im?im.alt:'');lb.classList.add('open');document.body.style.overflow='hidden';}
 function lbHide(){lb.classList.remove('open');document.body.style.overflow='';}
