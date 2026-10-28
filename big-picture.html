@@ -255,7 +255,7 @@ window.addEventListener('load',function(){
   gsap.utils.toArray('[data-parallax]').forEach(function(el){gsap.fromTo(el,{yPercent:8},{yPercent:-8,ease:'none',scrollTrigger:{trigger:el.parentElement,scrub:true}});});
   gsap.utils.toArray('[data-zoom]').forEach(function(el){gsap.fromTo(el,{scale:1.18},{scale:1,ease:'none',scrollTrigger:{trigger:el.parentElement,start:'top bottom',end:'bottom top',scrub:true}});});
   gsap.utils.toArray('[data-count]').forEach(function(el){var end=parseFloat(el.dataset.count),dec=(el.dataset.count.split('.')[1]||'').length,o={v:0};gsap.to(o,{v:end,duration:1.8,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 85%'},onStart:function(){el.textContent=(0).toFixed(dec)+(el.dataset.suffix||'');},onUpdate:function(){el.textContent=o.v.toFixed(dec)+(el.dataset.suffix||'');}});});
-  var trow=document.querySelector('.tiles .row');if(trow&&innerWidth>860){gsap.to(trow,{scrollLeft:function(){return trow.scrollWidth-trow.clientWidth;},ease:'none',scrollTrigger:{trigger:trow,start:'top 85%',end:'bottom 15%',scrub:1.2,invalidateOnRefresh:true}});}
+  var trow=null;if(trow&&innerWidth>860){gsap.to(trow,{scrollLeft:function(){return trow.scrollWidth-trow.clientWidth;},ease:'none',scrollTrigger:{trigger:trow,start:'top 85%',end:'bottom 15%',scrub:1.2,invalidateOnRefresh:true}});}
   gsap.utils.toArray('.marquee .track').forEach(function(t){gsap.to(t,{xPercent:-50,ease:'none',duration:28,repeat:-1});});
   gsap.utils.toArray('.fan').forEach(function(f){gsap.from(f.querySelectorAll('.fc'),{y:220,rotate:0,opacity:0,stagger:.09,duration:1.1,ease:'power3.out',scrollTrigger:{trigger:f,start:'top 80%'}});});
   /* gallery strip: native horizontal scroll, no pin (the pin jumped and left a blank screen) */
