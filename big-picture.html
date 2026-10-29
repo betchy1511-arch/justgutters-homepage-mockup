@@ -137,7 +137,14 @@ h1{font-weight:800;letter-spacing:-.035em;line-height:.92}h2{font-weight:800;let
 @media (max-width:860px){.hstrip .card{flex:0 0 78vw;scroll-snap-align:center}.hstrip .lead-card{flex:0 0 86vw}}
 @media (max-width:640px){.hero .collage{height:72vw}.hero .collage .c1{width:60%;height:90%}.hero .collage .c2{left:45%;width:40%;height:55%;bottom:40px}.hero .collage .c3{display:none}.srow .body{padding:30px 20px}.srow .n{font-size:3rem}}
 </style>
-</head>
+<style id="mobile-fix-1029">
+@media (max-width:1023px){.nw{white-space:nowrap}.ig-embed{overflow:hidden;border-radius:4px}.ig-embed iframe.instagram-media{margin-bottom:-36px!important}}
+@media (max-width:1023px){section:has(.ig-embed){padding-bottom:24px}section:has(.ig-embed)+section{padding-top:40px}}
+@media (max-width:1023px){.areas{gap:0}.areas>.rv:not(.mapcard){display:contents}.areas>.rv:not(.mapcard)>*{order:3}.areas>.rv:not(.mapcard)>h2,.areas>.rv:not(.mapcard)>.lead{order:1}.areas>.mapcard{order:2;margin:20px 0 6px}.rev-head .score{max-width:none}}
+@media (max-width:860px){.btn-small,.menu-btn,.rplay{min-height:44px}.playpause{min-width:44px;min-height:44px}.mockbar a,.topbar a,footer .cols a,footer .bottom a{min-height:44px;padding-top:11px;padding-bottom:11px}.fc{transform:none!important}}
+@media (max-width:768px){footer .social a{padding-left:14px;padding-right:14px}}
+@media (max-width:640px){.btn-phone{white-space:nowrap;font-size:.95rem}.topbar a{white-space:nowrap;font-size:clamp(.7rem,3.55vw,.9rem)}.stats div{display:flex;align-items:center;gap:18px;padding:16px 0!important}.stats strong{font-size:3rem;flex:0 0 6.4rem}.stats span{font-size:1rem;line-height:1.4}.tile{padding-top:0}.areas .mapcard iframe{min-height:250px;height:250px;flex:none}}
+</style></head>
 <body class="opt2 d2">
 <div class="mockbar">Homepage mockup 2 of 5: Big Picture. <a href="index.html">See the other directions</a></div>
 <div class="topbar"><div class="wrap"><a href="tel:+12012300381">Call or text for a free estimate: (201) 230-0381</a><div class="social"><a href="https://www.facebook.com/people/Just-Gutters/61554707186907/">Facebook</a><a href="https://www.instagram.com/just.gutters">Instagram</a><a href="https://www.google.com/maps?cid=3999183471512401406">Google</a><a href="https://www.tiktok.com/@just.gutters.llc">TikTok</a></div></div></div>
@@ -260,4 +267,5 @@ window.addEventListener('load',function(){
   gsap.utils.toArray('[data-story]').forEach(function(s){var steps=s.querySelectorAll('.sstep'),art=s.querySelector('.sart');steps.forEach(function(st,i){ScrollTrigger.create({trigger:st,start:'top 55%',end:'bottom 55%',onToggle:function(t){if(t.isActive){art.setAttribute('data-state',i);steps.forEach(function(x){x.classList.toggle('on',x===st);});}}});});});
   gsap.utils.toArray('[data-words]').forEach(function(el){var w=el.querySelectorAll('span');gsap.from(w,{opacity:.15,stagger:.06,ease:'none',scrollTrigger:{trigger:el,start:'top 80%',end:'bottom 45%',scrub:true}});});
 });
-</script></body></html>
+</script><script>(function(){function s(){var h=0;document.querySelectorAll('body>.mockbar,body>.topbar').forEach(function(e){h+=e.offsetHeight});if(h)document.documentElement.style.setProperty('--bars-h',h+'px')}s();addEventListener('resize',s);addEventListener('load',s)})();
+(function(){var t;function r(){clearTimeout(t);t=setTimeout(function(){if(window.ScrollTrigger)ScrollTrigger.refresh();},200)}document.querySelectorAll('img').forEach(function(i){if(!i.complete)i.addEventListener('load',r,{once:true})});addEventListener('load',function(){setTimeout(r,1600)})})();</script></body></html>

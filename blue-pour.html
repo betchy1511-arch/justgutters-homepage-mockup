@@ -157,7 +157,14 @@ footer{background:transparent;padding:30px 0 30px}footer .wrap>div:first-child{b
 @media (max-width:860px){header.site{top:70px}.hero{padding-top:150px}}
 @media (max-width:640px){.hero{min-height:auto;padding:110px 0 60px}.hero h1{font-size:2rem}.tile{padding-top:130px}.fan{flex-wrap:wrap;gap:14px;min-height:auto}.fc{width:40%;margin:0;transform:none!important}footer .wrap>div:first-child{padding:36px 24px 24px;border-radius:28px}.marquee{margin:0 -20px}}
 </style>
-</head>
+<style id="mobile-fix-1029">
+@media (max-width:1023px){.nw{white-space:nowrap}.ig-embed{overflow:hidden;border-radius:4px}.ig-embed iframe.instagram-media{margin-bottom:-36px!important}}
+@media (max-width:1023px){section:has(.ig-embed){padding-bottom:24px}section:has(.ig-embed)+section{padding-top:40px}}
+@media (max-width:1023px){.areas{gap:0}.areas>.rv:not(.mapcard){display:contents}.areas>.rv:not(.mapcard)>*{order:3}.areas>.rv:not(.mapcard)>h2,.areas>.rv:not(.mapcard)>.lead{order:1}.areas>.mapcard{order:2;margin:20px 0 6px}.rev-head .score{max-width:none}}
+@media (max-width:860px){.btn-small,.menu-btn,.rplay{min-height:44px}.playpause{min-width:44px;min-height:44px}.mockbar a,.topbar a,footer .cols a,footer .bottom a{min-height:44px;padding-top:11px;padding-bottom:11px}.fc{transform:none!important}}
+@media (max-width:768px){footer .social a{padding-left:14px;padding-right:14px}}
+@media (max-width:640px){.btn-phone{white-space:nowrap;font-size:.95rem}.topbar a{white-space:nowrap;font-size:clamp(.7rem,3.55vw,.9rem)}.stats div{display:flex;align-items:center;gap:18px;padding:16px 0!important}.stats strong{font-size:3rem;flex:0 0 6.4rem}.stats span{font-size:1rem;line-height:1.4}.tile{padding-top:0}.areas .mapcard iframe{min-height:250px;height:250px;flex:none}}
+</style></head>
 <body class="opt1 d1">
 <noscript><style>#pre{display:none}</style></noscript><div id="pre" aria-hidden="true"><div class="preinner"><div class="drop"><img src="assets/justGutters_logo.png" alt=""></div><div class="pretxt"><strong>Good gutters</strong><span>Great peace of mind</span><em>Seamless gutters, formed on site in Hackettstown, NJ</em></div></div></div>
 <div class="mockbar">Homepage mockup 1 of 5: Blue Pour. <a href="index.html">See the other directions</a></div>
@@ -283,4 +290,5 @@ window.addEventListener('load',function(){
   gsap.utils.toArray('[data-story]').forEach(function(s){var steps=s.querySelectorAll('.sstep'),art=s.querySelector('.sart');steps.forEach(function(st,i){ScrollTrigger.create({trigger:st,start:'top 55%',end:'bottom 55%',onToggle:function(t){if(t.isActive){art.setAttribute('data-state',i);steps.forEach(function(x){x.classList.toggle('on',x===st);});}}});});});
   gsap.utils.toArray('[data-words]').forEach(function(el){var w=el.querySelectorAll('span');gsap.from(w,{opacity:.15,stagger:.06,ease:'none',scrollTrigger:{trigger:el,start:'top 80%',end:'bottom 45%',scrub:true}});});
 });
-</script></body></html>
+</script><script>(function(){function s(){var h=0;document.querySelectorAll('body>.mockbar,body>.topbar').forEach(function(e){h+=e.offsetHeight});if(h)document.documentElement.style.setProperty('--bars-h',h+'px')}s();addEventListener('resize',s);addEventListener('load',s)})();
+(function(){var t;function r(){clearTimeout(t);t=setTimeout(function(){if(window.ScrollTrigger)ScrollTrigger.refresh();},200)}document.querySelectorAll('img').forEach(function(i){if(!i.complete)i.addEventListener('load',r,{once:true})});addEventListener('load',function(){setTimeout(r,1600)})})();</script></body></html>
